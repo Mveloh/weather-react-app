@@ -3,15 +3,28 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="container">
         <h1>Weather</h1>
-      </header>
-      <footer>
-        This project was coded by Nomvelo Zulu and is {""}
-        <a href="/" target="_blank">
-          open sourced on GitHub
-        </a>
-      </footer>
+
+        <footer>
+          This project was coded by{" "}
+          <a
+            href="https://www.linkedin.com/in/nomvelozulup"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Nomvelo Zulu{" "}
+          </a>{" "}
+          and is {""}
+          <a
+            href="https://www.github.com/Mveloh/weather-react-app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            open sourced on GitHub
+          </a>
+        </footer>
+      </div>
     </div>
   );
 }
