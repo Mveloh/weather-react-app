@@ -4,7 +4,7 @@ import DateFormat from "./DateFormat";
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <h1>{props.data.city}</h1>
+      <h1>{props.data.place}</h1>
       <ul>
         <li>
           <DateFormat date={props.data.date} />

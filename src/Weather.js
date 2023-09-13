@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+
 import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
@@ -13,7 +14,7 @@ export default function Weather(props) {
       description: response.data.condition.description,
       humidity: response.data.temperature.humidity,
       wind: Math.round(response.data.wind.speed),
-      city: response.data.city,
+      place: response.data.city,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
       date: new Date(response.data.time * 1000),
     });
@@ -40,12 +41,13 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
+        <h1>{weatherData.place}</h1>
         <WeatherInfo info={weatherData} />
       </div>
     );
   } else {
     const apiKey = "864c93f2e4tcc8176afdd913f0a2b0o2";
-    let city = "Durban";
+    //let city = "Durban";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleSubmit);
   }
