@@ -16,7 +16,7 @@ export default function Weather(props) {
       humidity: response.data.temperature.humidity,
       wind: Math.round(response.data.wind.speed),
       place: response.data.city,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      icon: response.data.condition.icon,
       date: new Date(response.data.time * 1000),
     });
   }
