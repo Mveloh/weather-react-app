@@ -37,10 +37,8 @@
   margin-left: 5px;
   line-height: 1;
 }
-.Weather img {
+.Weather canvas {
   display: inline-block;
-  height: 60px;
   margin-top: unset;
   vertical-align: top;
-  width: 60px;
 }
