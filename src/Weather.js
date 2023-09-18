@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Weather.css";
 
 import WeatherInfo from "./WeatherInfo";
+import WeatherDaily from "./WeatherDaily";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -56,6 +57,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo info={weatherData} />
+        <WeatherDaily code="scattered-clouds-day" size={32} />
       </div>
     );
   } else {
