@@ -12,6 +12,7 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      coord: response.data.coordinates,
       temp: Math.round(response.data.temperature.current),
       description: response.data.condition.description,
       humidity: response.data.temperature.humidity,
@@ -57,7 +58,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo info={weatherData} />
-        <WeatherDaily code="scattered-clouds-day" size={32} />
+        <WeatherDaily coordinate={weatherData.coord} />
       </div>
     );
   } else {
